@@ -1,0 +1,207 @@
+head
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu')
+  meta(charset='utf-8')
+  title Book Shop UI
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')
+header
+    p Your Cart!
+#maindiv.grid-container
+    each newBook in newbooks
+        .grid-item
+            center
+                img#myImg(src=newBook.link width='120' height='170')
+                li  Book Name: #{newBook.bookName}
+                li  Author: #{newBook.Author}
+                li  Price: #{newBook.Price} EGP
+
+div
+  center
+    form(action="/congrats")
+      button#btn1(type='button' name='button' onclick ="this.form.submit()") I'm Done!
+.footer-dark
+  footer
+    .container
+      .row
+        .col-sm-6.col-md-3.item
+          h3 Categories
+          ul
+            li
+              a(href='#') Fictional Books
+            li
+              a(href='#') Classic Books
+            li
+              a(href='#') Programming Books
+        .col-sm-6.col-md-3.item
+          h3 About
+          ul
+            li
+              a(href='#') Company
+            li
+              a(href='#') Team
+            li
+              a(href='#') Careers
+        .col-md-6.item.text
+          h3 MY NICE SHOP
+          p
+            | A Very Nice Online Shop selling variety of books. hasing NoName till now. My final project in iti summer training.
+        .col.item.social
+          a(href='#')
+            i.icon.ion-social-facebook
+          a(href='#')
+            i.icon.ion-social-twitter
+          a(href='#')
+            i.icon.ion-social-snapchat
+          a(href='#')
+            i.icon.ion-social-instagram
+      p.copyright MahmoudAhmedAbdelkader &copy; 2021
+style.
+  header
+  {
+      text-align: center;
+      color:#f0f9ff;
+      background-color:#282d32;
+  }
+  .footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+  }
+  .footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+  }
+  .footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+  }
+  .footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+  }
+  .footer-dark ul a:hover {
+  opacity:0.8;
+  }
+  @media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+  text-align:center;
+  padding-bottom:20px;
+  }
+  }
+  .footer-dark .item.text {
+  margin-bottom:36px;
+  }
+  @media (max-width:767px) {
+  .footer-dark .item.text {
+  margin-bottom:0;
+  }
+  }
+  .footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+  }
+  .footer-dark .item.social {
+  text-align:center;
+  }
+  @media (max-width:991px) {
+  .footer-dark .item.social {
+  text-align:center;
+  margin-top:20px;
+  }
+  }
+  .footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+  }
+  .footer-dark .item.social > a:hover {
+  opacity:0.9;
+  }
+  .footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+  }
+  html {
+  font-family: "Ubuntu", sans-serif;    
+  background-color: lightgrey;
+  }
+  label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  }
+  ​ input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  }
+  .dist {
+  padding-top: 25px;
+  }
+  button {
+  border-radius: 10px;
+  margin-top: 25px;
+  width: 100px;
+  }
+  #div1 {
+  text-align: center;
+  }
+  #div2 {
+  margin-left: 30px;
+  }
+  #div3 {
+  margin-left: 30px;
+  }
+  #maindiv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color:;
+  padding: 10px;
+  margin-top: 10px;
+  grid-gap: 10px;
+  }
+  .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 18px;
+  }
+  li{
+      list-style-type:none
+  }
+  #btn1
+  {
+      display:inline-block;
+      padding:0.7em 1.7em;
+      margin:0 0.3em 0.3em 0;
+      margin:0 0.3em 0.3em 0;
+      border-radius:0.2em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'Ubuntu',sans-serif;
+      font-weight:400;
+      color:#FFFFFF;
+      background-color:#3369ff;
+      box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+      text-align:center;
+      position:relative;   
+ }
