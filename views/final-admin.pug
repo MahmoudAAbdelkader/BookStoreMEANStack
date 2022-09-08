@@ -1,0 +1,84 @@
+head
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu')
+  meta(charset='utf-8')
+  title MyLibrary
+header
+  #div1
+    form(method = "post" action = "/adminHelp")
+        div
+            label Book Name
+            input#bookName(name = 'bookName')
+        .dist
+            label Author Name
+            input#Author(name = 'Author')
+        .dist
+            label Book Cover URL
+            input#URL(type='url' name = 'URL')
+        .dist
+            label Number Of Items
+            input#URL(type='Number' name = 'NumberOfItems')
+        .dist
+            label Price
+            input#URL(type='Number' name = 'Price')
+
+        button#btn1(type='button' name='button' onclick ="this.form.submit()") Add Book
+#maindiv.grid-container
+    each newBook in books
+        .grid-item
+            center
+                img#myImg(src=newBook.link width='120' height='170')
+                li  Book Name: #{newBook.bookName}
+                li  Author: #{newBook.Author}
+                li  Number Of Books: #{newBook.NumberOfItems}
+                li  Price: #{newBook.Price} EGP
+
+style.
+  html {
+  font-family: "Ubuntu", sans-serif;    
+  background-color: lightgrey;
+  }
+  label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  }
+  ​ input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  }
+  .dist {
+  padding-top: 25px;
+  }
+  button {
+  border-radius: 10px;
+  margin-top: 25px;
+  width: 100px;
+  }
+  #div1 {
+  text-align: center;
+  }
+  #div2 {
+  margin-left: 30px;
+  }
+  #div3 {
+  margin-left: 30px;
+  }
+  #maindiv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color:;
+  padding: 10px;
+  margin-top: 10px;
+  grid-gap: 10px;
+  }
+  .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 18px;
+  }
+  li{
+      list-style-type:none
+  }
