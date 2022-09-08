@@ -1,0 +1,22 @@
+{
+  "name": "javascr",
+  "version": "1.0.0",
+  "description": "ITI",
+  "main": "app.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "mongoose": "^5.13.3",
+    "pug": "^3.0.2"
+  }
+}
